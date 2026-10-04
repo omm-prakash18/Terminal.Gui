@@ -70,8 +70,10 @@
     <!-- =================================================================== -->
     <ItemGroup>
         <ProjectReference Include="..\Terminal.Gui.Analyzers.Internal\Terminal.Gui.Analyzers.Internal.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="..\Terminal.Gui.Analyzers\Terminal.Gui.Analyzers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <PackageReference Include="Microsoft.Net.Compilers.Toolset" PrivateAssets="all" />
     </ItemGroup>
+
     <ItemGroup>
       <!-- Enable Nuget Source Link for github -->
       <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
