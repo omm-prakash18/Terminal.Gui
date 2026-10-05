@@ -8,7 +8,7 @@
         <RootNamespace>Terminal.Gui.Analyzers</RootNamespace>
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <IsRoslynComponent>true</IsRoslynComponent>
-        <NoWarn>$(NoWarn);RS2008;RS1032</NoWarn>
+        <NoWarn>$(NoWarn);RS2008;RS1032;RS1038</NoWarn>
     </PropertyGroup>
 
 

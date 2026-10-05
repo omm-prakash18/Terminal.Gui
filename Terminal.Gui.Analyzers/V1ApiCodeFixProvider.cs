@@ -13,13 +13,13 @@ namespace Terminal.Gui.Analyzers
     [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(V1ApiCodeFixProvider)), Shared]
     public class V1ApiCodeFixProvider : CodeFixProvider
     {
-        public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(
+        public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(new[] {
             V1ApiDiagnosticAnalyzer.RuleClicked.Id,
             V1ApiDiagnosticAnalyzer.RuleToplevel.Id,
             V1ApiDiagnosticAnalyzer.RuleBounds.Id,
             V1ApiDiagnosticAnalyzer.RuleTabView.Id,
             V1ApiDiagnosticAnalyzer.RuleRadioGroup.Id,
-            V1ApiDiagnosticAnalyzer.RuleAcceptingIgnoresArgs.Id);
+            V1ApiDiagnosticAnalyzer.RuleAcceptingIgnoresArgs.Id });
 
         public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
 

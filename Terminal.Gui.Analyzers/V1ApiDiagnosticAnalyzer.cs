@@ -125,7 +125,7 @@ namespace Terminal.Gui.Analyzers
             DiagnosticSeverity.Warning,
             isEnabledByDefault: true);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(new[] {
             RuleClicked,
             RuleApplicationStatic,
             RuleToplevel,
@@ -139,7 +139,7 @@ namespace Terminal.Gui.Analyzers
             RuleAcceptingIgnoresArgs,
             RuleMenuItem6ArgCtor,
             RuleLayoutStyle,
-            RulePosAt);
+            RulePosAt });
 
         public override void Initialize(AnalysisContext context)
         {
@@ -271,7 +271,7 @@ namespace Terminal.Gui.Analyzers
                 return;
             }
 
-            string typeName = objectCreation.Type switch
+            string? typeName = objectCreation.Type switch
             {
                 IdentifierNameSyntax id => id.Identifier.Text,
                 QualifiedNameSyntax qn => qn.Right.Identifier.Text,
